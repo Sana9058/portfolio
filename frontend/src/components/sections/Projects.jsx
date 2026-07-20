@@ -20,7 +20,9 @@ export default function Projects() {
       setLoading(true);
       setError(null);
 
-      const { data } = await axios.get("http://localhost:5000/api/projects");
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/projects`
+      );
 
       setProjectsData(data);
 
