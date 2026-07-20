@@ -42,6 +42,10 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+app.get("/test-sana", (req, res) => {
+  res.send("Sana deployment test");
+});
+
 // Server
 const PORT = process.env.PORT || 5000;
 
