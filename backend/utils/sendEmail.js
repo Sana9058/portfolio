@@ -1,14 +1,17 @@
 const nodemailer = require("nodemailer");
 
-const sendEmail = async ({ name, email, subject, message }) => {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+// Create transporter only once
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // STARTTLS
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
+const sendEmail = async ({ name, email, subject, message }) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
@@ -18,13 +21,10 @@ const sendEmail = async ({ name, email, subject, message }) => {
       <h2>New Portfolio Contact</h2>
 
       <p><strong>Name:</strong> ${name}</p>
-
       <p><strong>Email:</strong> ${email}</p>
-
       <p><strong>Subject:</strong> ${subject}</p>
 
       <p><strong>Message:</strong></p>
-
       <p>${message}</p>
     `,
   };
