@@ -1,8 +1,12 @@
 # 🌐 Sana Aijaz | Portfolio
 
+![Portfolio Preview](frontend/public/images/portfolio-preview.png)
+
 > A modern, responsive full-stack developer portfolio showcasing my projects, technical skills, experience, and software engineering journey.
 
-This portfolio is built to highlight my work, technical expertise, and passion for developing scalable web applications. It serves as my personal website where recruiters, developers, and collaborators with an interactive platform to explore my projects, resume, technical skills, and contact information.
+🚀 **Live Demo:** https://portfolio-zeta-bice-82.vercel.app
+
+This portfolio is built to highlight my work, technical expertise, and passion for developing scalable web applications. This portfolio serves as my personal website, providing recruiters, developers, and collaborators with an interactive platform to explore my projects, technical skills, resume & contact information.
 
 ---
 
@@ -18,7 +22,7 @@ This portfolio is built to highlight my work, technical expertise, and passion f
 - 📄 Dedicated Resume section
 - 📬 Contact form with real-time email delivery using Express.js, MongoDB, and Nodemailer
 - 🔗 Social media integration
-- 🚀 Full Stack MERN architecture
+- 🚀 Full Stack MERN architecture with RESTful APIs
 
 ---
 
@@ -36,6 +40,9 @@ This portfolio is built to highlight my work, technical expertise, and passion f
 
 ### Icons
 - Lucide React
+
+### APIs
+- Nodemailer
 
 ### Backend
 - Node.js
@@ -72,7 +79,6 @@ portfolio/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/
 │   │   ├── components/
 │   │   │   ├── layout/
 │   │   │   └── sections/
@@ -104,23 +110,29 @@ Before running this project, make sure you have installed:
 ## ⚙️ Installation
 
 Clone the repository
+
 ```bash
 git clone https://github.com/Sana9058/portfolio.git
 ```
 
 Navigate to the project
+
 ```bash
 cd portfolio
 ```
 
 Install frontend dependencies
+
 ```bash
+cd frontend
 npm install
 ```
 
-Install backend dependencies
+### Install backend dependencies
+
 ```bash
-cd server
+cd ..
+cd backend
 npm install
 ```
 
@@ -148,6 +160,11 @@ CORS_ORIGIN=http://localhost:5173
 
 # ▶️ Running the Project
 
+> **Open two separate terminal windows:**
+>
+> - **Terminal 1:** Start the backend server
+> - **Terminal 2:** Start the frontend development server
+
 ### Start Backend
 
 ```bash
@@ -172,7 +189,7 @@ Backend  : http://localhost:5000
 
 ## 📄 Resume
 
-The portfolio includes a dedicated Resume section where visitors can view the latest version of my resume directly from the website.
+Visitors can view and download the latest version of my resume directly from the portfolio.
 
 ---
 
@@ -238,12 +255,6 @@ git push origin feature-name
 ```
 
 5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
