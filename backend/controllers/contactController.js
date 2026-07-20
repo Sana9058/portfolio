@@ -29,7 +29,10 @@ const createContact = async (req, res) => {
       data: contact,
     });
   } catch (error) {
-    console.error(error);
+    console.error("======CONTACT ERROR");
+    console.error("Message:", error.message);
+    console.error("Code:", error.code);
+    console.error("Stack:", error.stack);
 
     res.status(500).json({
       success: false,
