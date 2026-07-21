@@ -20,7 +20,7 @@ This portfolio is built to highlight my work, technical expertise, and passion f
 - 💼 Project showcase with detailed information
 - 🛠️ Skills, Experience, and Education sections
 - 📄 Dedicated Resume section
-- 📬 Contact form with real-time email delivery using Express.js, MongoDB, and Nodemailer
+- 📬 Contact form with real-time email delivery powered by Express.js, MongoDB, and Resend Email API
 - 🔗 Social media integration
 - 🚀 Full Stack MERN architecture with RESTful APIs
 
@@ -34,15 +34,8 @@ This portfolio is built to highlight my work, technical expertise, and passion f
 - Tailwind CSS
 - Axios
 - Vite
-
-### Animations
 - Framer Motion
-
-### Icons
 - Lucide React
-
-### APIs
-- Nodemailer
 
 ### Backend
 - Node.js
@@ -52,11 +45,33 @@ This portfolio is built to highlight my work, technical expertise, and passion f
 - MongoDB
 - Mongoose
 
-### Tools
+### Email Service
+- Resend Email API
+
+### Deployment
+- Vercel
+- Render
+- MongoDB Atlas
+
+### Development Tools
 - Git
 - GitHub
 - VS Code
 - Postman
+
+---
+
+## 🏗️ Architecture
+
+```
+React (Frontend)
+        │
+        ▼
+Express REST API
+        │
+        ├── MongoDB Atlas
+        └── Resend Email API
+```
 
 ---
 
@@ -150,8 +165,9 @@ VITE_API_URL=http://localhost:5000
 
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-CORS_ORIGIN=http://localhost:5173
+MONGO_URI=your_mongodb_connection_string
+EMAIL_USER=your_email@example.com
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxx
 ```
 
 > **Note:** Never commit your `.env` files to GitHub.
@@ -187,6 +203,26 @@ Frontend : http://localhost:5173
 Backend  : http://localhost:5000
 ```
 
+---
+
+# ☁️ Deployment
+
+The portfolio is deployed using modern cloud platforms:
+
+### Frontend
+- **Vercel**
+
+### Backend
+- **Render**
+
+### Database
+- **MongoDB Atlas**
+
+### Email Service
+- **Resend Email API**
+
+---
+
 ## 📄 Resume
 
 Visitors can view and download the latest version of my resume directly from the portfolio.
@@ -209,7 +245,7 @@ Fully optimized for:
 - 📝 Blog section
 - 📊 GitHub contribution graph
 - 🔍 Project filtering and search
-- 🛠️ Admin dashboard for managing portfolio content
+- 🛠️ Admin dashboard with authentication managing portfolio content
 - 🌐 Internationalization (i18n)
 - 🎨 Theme customization (multiple color themes)
 
@@ -272,3 +308,13 @@ git push origin feature-name
 If you found this project helpful or interesting, consider giving it a ⭐ on GitHub.
 
 It helps support my work and motivates me to build more projects.
+
+---
+
+## 📄 License
+
+This repository contains my personal portfolio website and is intended for showcasing my work and technical skills.
+
+The source code is not licensed for reuse, redistribution, or commercial use without prior written permission.
+
+**© 2026 Sana Aijaz. All rights reserved.**

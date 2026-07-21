@@ -33,10 +33,11 @@ const createContact = async (req, res) => {
     console.error("Message:", error.message);
     console.error("Code:", error.code);
     console.error("Stack:", error.stack);
+    console.log(error);
 
     res.status(500).json({
       success: false,
-      message: "Failed to send message",
+      message: error.message || "Failed to send message",
     });
   }
 };
